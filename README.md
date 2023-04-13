@@ -18,8 +18,6 @@ The tutorial is divided into five parts:
 
 [ZCU104 Hardware Platform](/zcu104_hw_platform)
 
-[ZCU104 Hardware Platform](/zcu104_hw_platform)
-
 [ZCU104 Hardware Acceleration](/zcu104_hw_acceleration)
 
 [ZCU104 Hardware Acceleration Inside a Virtual Machine](/zcu104_vm_hw_accel)
