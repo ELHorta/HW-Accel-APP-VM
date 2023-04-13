@@ -12,12 +12,14 @@ The [ZCU 104 Board](https://www.xilinx.com/products/boards-and-kits/zcu104.html)
 
 The tutorial is divided into five parts:
 
-[Booting Ubuntu 22.04 on ZCU104](https://github.com/ELHorta/HW-Accel-APP-VM/tree/main/boot)
+[Booting Ubuntu 22.04 on ZCU104](/main/boot)
 
-[vAccel Installation (No Hardware Acceleration)](https://github.com/ELHorta/HW-Accel-APP-VM/tree/main/vaccel_install)
+[vAccel Installation (/vaccel_install)
 
-[ZCU104 Hardware Platform](https://github.com/ELHorta/HW-Accel-APP-VM/tree/main/zcu104_hw_platform)
+[ZCU104 Hardware Platform](/zcu104_hw_platform)
 
-[ZCU104 Hardware Acceleration](https://github.com/ELHorta/HW-Accel-APP-VM/tree/main/zcu104_hw_acceleration)
+[ZCU104 Hardware Platform](/zcu104_hw_platform)
 
-[ZCU104 Hardware Acceleration Inside a Virtual Machine](https://github.com/ELHorta/HW-Accel-APP-VM/tree/main/zcu104_vm_hw_accel)
+[ZCU104 Hardware Acceleration](/zcu104_hw_acceleration)
+
+[ZCU104 Hardware Acceleration Inside a Virtual Machine](/zcu104_vm_hw_accel)
