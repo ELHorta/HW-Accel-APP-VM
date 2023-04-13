@@ -14,7 +14,7 @@ The tutorial is divided into five parts:
 
 [Booting Ubuntu 22.04](https://github.com/ELHorta/HW-Accel-APP-VM/wiki/ZCU104-Hardware-Platform)
 
-[vAccel Installation (No Hardware Acceleration)](https://github.com/ELHorta/HW-Accel-APP-VM/wiki/ZCU-104---vAccel-(No-HW-Acceleration))
+[vAccel Installation (No Hardware Acceleration)](https://github.com/ELHorta/HW-Accel-APP-VM/wiki/vAccel-Installation-(No-Hardware-Acceleration))
 
 [Hardware Platform Creation](https://github.com/ELHorta/HW-Accel-APP-VM/wiki/ZCU-104-Hardware-Platform-Creation)
 
