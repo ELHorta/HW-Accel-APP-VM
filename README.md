@@ -18,6 +18,6 @@ The tutorial is divided into five parts:
 
 [ZCU104 Hardware Platform](https://github.com/ELHorta/HW-Accel-APP-VM/tree/main/zcu104_hw_platform)
 
-[ZCU104 Hardware Acceleration](https://github.com/ELHorta/HW-Accel-APP-VM/wiki/ZCU-104-Hardware-Acceleration)
+[ZCU104 Hardware Acceleration](https://github.com/ELHorta/HW-Accel-APP-VM/tree/main/zcu104_hw_acceleration)
 
 [ZCU104 vAccel HW Acceleration](https://github.com/ELHorta/HW-Accel-APP-VM/wiki/ZCU-104----vAccel---HW-Acceleration)
