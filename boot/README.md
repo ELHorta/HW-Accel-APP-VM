@@ -1,4 +1,5 @@
-###Booting Ubuntu 22.04 on ZCU104
+## **Booting Ubuntu 22.04 on ZCU104** 
+
 
 
 The image used to boot Ubuntu 22.04 on the ZCU 104 board is available here:
