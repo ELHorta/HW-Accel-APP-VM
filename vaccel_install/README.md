@@ -55,9 +55,9 @@ Replace the "rootfs.img" file in "~/frcrk_5.0/share" with this one:
 The first step is to define a network interface that will be used to transfer files between the host and the VM:
 
 ```'
-sudo ip tuntap add dev tapTestFc mode tap\
-sudo ip addr add dev tapTestFc 172.42.0.1/24\
-sudo ip link set dev tapTestFc u
+sudo ip tuntap add dev tapTestFc mode tap 
+sudo ip addr add dev tapTestFc 172.42.0.1/24 
+sudo ip link set dev tapTestFc up
 ```
 
 
