@@ -12,9 +12,9 @@ The [ZCU 104 Board](https://www.xilinx.com/products/boards-and-kits/zcu104.html)
 
 The tutorial is divided into five parts:
 
-[Booting Ubuntu 22.04 on ZCU104](/main/boot)
+[Booting Ubuntu 22.04 on ZCU104](/boot)
 
-[vAccel Installation (/vaccel_install)
+[vAccel Installation](/vaccel_install)
 
 [ZCU104 Hardware Platform](/zcu104_hw_platform)
 
