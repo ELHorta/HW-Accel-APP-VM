@@ -1,4 +1,4 @@
-## **Booting Ubuntu 22.04 on ZCU104** 
+# **Booting Ubuntu 22.04 on ZCU104** 
 
 
 
