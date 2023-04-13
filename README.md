@@ -12,12 +12,12 @@ The [ZCU 104 Board](https://www.xilinx.com/products/boards-and-kits/zcu104.html)
 
 The tutorial is divided into five parts:
 
-[Booting Ubuntu 22.04](https://github.com/ELHorta/VM-Migration-With-Hardware-Acceleration/wiki/ZCU-104-AMD-Xilinx----Ubuntu)
+[Booting Ubuntu 22.04](https://github.com/ELHorta/HW-Accel-APP-VM/wiki/ZCU104-Hardware-Platform)
 
-[vAccel Installation (No Hardware Acceleration)](https://github.com/ELHorta/VM-Migration-With-Hardware-Acceleration/wiki/ZCU-104---vAccel-(No-HW-Acceleration))
+[vAccel Installation (No Hardware Acceleration)](https://github.com/ELHorta/HW-Accel-APP-VM/wiki/ZCU-104---vAccel-(No-HW-Acceleration))
 
-[Hardware Platform Creation](https://github.com/ELHorta/VM-Migration-With-Hardware-Acceleration/wiki/ZCU-104-Hardware-Platform-Creation)
+[Hardware Platform Creation](https://github.com/ELHorta/HW-Accel-APP-VM/wiki/ZCU-104-Hardware-Platform-Creation)
 
-[Hardware Acceleration](https://github.com/ELHorta/VM-Migration-With-Hardware-Acceleration/wiki/ZCU-104-Hardware-Acceleration)
+[Hardware Acceleration](https://github.com/ELHorta/HW-Accel-APP-VM/wiki/ZCU-104-Hardware-Acceleration)
 
-[vAccel + Hardware Acceleration](https://github.com/ELHorta/VM-Migration-With-Hardware-Acceleration/wiki/ZCU-104----vAccel---HW-Acceleration)
+[vAccel + Hardware Acceleration](https://github.com/ELHorta/HW-Accel-APP-VM/wiki/ZCU-104----vAccel---HW-Acceleration)
