@@ -38,7 +38,7 @@ A set o files ready to be used can be found here:
 [ZCU104 Platform Files](https://drive.google.com/drive/folders/15MmE8C17n_ZY8ACJh5jjW4K7eWNIAx8c?usp=share_link)
 
 
-After copying these files, the xlxn-config snap tool is necessary to load the hardware platform created by the Xilinx Tutorial.
+After copying these files, the xlxn-config snap tool must be used to load the hardware acceleration platform into the ZCU104 board.
 
 To install this tool, just run:
 
@@ -46,13 +46,13 @@ To install this tool, just run:
 sudo snap install xlnx-config --classic
 ```
 
-This command verifies if the hardware platform is available for deployment:
+This command verifies if the hardware acceleration platform is available for deployment:
 
 ```
 xlnx-config -q
 ```
 
-If everything is ok, it will show this message:
+If the hardware acceleration platform is available, it will show this message:
 
 ```
 PAC configurations present in the system:
