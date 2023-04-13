@@ -16,7 +16,7 @@ The tutorial is divided into five parts:
 
 [vAccel Installation (No Hardware Acceleration)](https://github.com/ELHorta/HW-Accel-APP-VM/tree/main/vaccel_install)
 
-[ZCU104 Hardware Platform](https://github.com/ELHorta/HW-Accel-APP-VM/wiki/ZCU-104-Hardware-Platform-Creation)
+[ZCU104 Hardware Platform](https://github.com/ELHorta/HW-Accel-APP-VM/tree/main/zcu104_hw_platform)
 
 [ZCU104 Hardware Acceleration](https://github.com/ELHorta/HW-Accel-APP-VM/wiki/ZCU-104-Hardware-Acceleration)
 
