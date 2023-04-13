@@ -1,4 +1,4 @@
-# **ZCU104 Hardware Platform** 
+# **ZCU104 Hardware Acceleration Platform** 
 
 
 
