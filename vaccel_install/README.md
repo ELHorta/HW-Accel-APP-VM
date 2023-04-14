@@ -38,7 +38,6 @@ https://github.com/nubificus/vaccel-tutorials
 Lab 4 on the vAccel website targets an x86 machine. The modified instructions for running the examples on the ZCU104 can be seen in the following paragraphs.
 
 Create a folder to store the Firecracker files, download and uncompress them:  
-
 ```
 mkdir frcrk_5.0\
 cd frcrk_5.0\
@@ -46,15 +45,18 @@ wget https://drive.google.com/file/d/1hQF_kHSmi7S_mvXjpHJQGQqhVhG7udmp/view?usp=
 tar -xvf vaccel_aarch64_Release_v0.5.0.tar.gz
 ```
 
-Replace the "rootfs.img" file in "~/frcrk_5.0/share" with this one:  
-[rootfs.img](https://github.com/ELHorta/VM-Migration-With-Hardware-Acceleration/wiki/ZCU-104-Hardware-Platform-Creation) 
 
-
+Update the "rootfs.img" file in "~/frcrk_5.0/share":
+```
+cd share\
+rm rootfs.img
+wget https://drive.google.com/file/d/1RdjhdEm6ORHTZpAt6zKy4NvDMdHdTvNy/view?usp=share_link
+```
 
 
 The first step is to define a network interface that will be used to transfer files between the host and the VM:
 
-```'
+```
 sudo ip tuntap add dev tapTestFc mode tap 
 sudo ip addr add dev tapTestFc 172.42.0.1/24 
 sudo ip link set dev tapTestFc up
@@ -62,8 +64,14 @@ sudo ip link set dev tapTestFc up
 
 
 
-Run Firecracker
+Run Firecracker 
+
+```
+sudo rm fc.sock 
 sudo VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/plugins/exec/libvaccel-exec.so LD_LIBRARY_PATH=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/src/ ./bin/firecracker --api-sock fc.sock --config-file ./share/config_vsock.json --seccomp-level 0
+```
+
+Login = root + ENTER
 
 
 
@@ -75,18 +83,27 @@ Make it executable:
 chmod +x vaccelrt-agent
 ```
 
-Host:
+Host: 
+```
 sudo rm /tmp/vaccel.sock_2048 
 sudo rm /tmp/vaccel.sock 
+```
 
+```
 export VACCEL_BACKENDS=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/plugins/noop/libvaccel-noop.so
 export LD_LIBRARY_PATH=/home/ubuntu/frcrk_5.0/lib:$LD_LIBRARY_PATH
 export VACCEL_AGENT_ENDPOINT=unix:///tmp/vaccel.sock_2048
 ./vaccelrt-agent -a $VACCEL_AGENT_ENDPOINT
-
+```
 
 
 guest:
+```
 sudo rm /tmp/vaccel.sock 
 sudo rm fc.sock
 LD_LIBRARY_PATH=. VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/opt/vaccel/lib/libvaccel-vsock.so ./wrapper-args-vaccel
+```
+
+
+
+
