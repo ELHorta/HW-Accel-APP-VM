@@ -81,16 +81,17 @@ Open a new terminal.
 Get the agent binary and make it executable: 
 ```
 cd
-wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=10MD12lv-kwPpE9dE5NZRB8wO6XdXo_8c' -O vaccelrt-agent
+mkdir vaccel_agent
+cd ~/vaccel_agent
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1CrIYQGg4TBye9ZVt0ZVt8h-IcW4wl1lq' -O vaccelrt-agent
 chmod +x vaccelrt-agent
 ```
 
 
 Run on this terminal the agent:
 ```
-cd
+cd ~/vaccel_agent
 sudo rm /tmp/vaccel.sock_2048 
-sudo rm /tmp/vaccel.sock 
 export VACCEL_BACKENDS=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/plugins/noop/libvaccel-noop.so
 export LD_LIBRARY_PATH=/home/ubuntu/frcrk_5.0/lib:$LD_LIBRARY_PATH
 export VACCEL_AGENT_ENDPOINT=unix:///tmp/vaccel.sock_2048
@@ -100,8 +101,6 @@ export VACCEL_AGENT_ENDPOINT=unix:///tmp/vaccel.sock_2048
 
 Run the application on Firecracker:
 ```
-sudo rm /tmp/vaccel.sock 
-sudo rm fc.sock
 LD_LIBRARY_PATH=. VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/opt/vaccel/lib/libvaccel-vsock.so ./wrapper-args-vaccel
 ```
 
