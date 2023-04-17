@@ -48,7 +48,7 @@ tar -xvf vaccel_aarch64_Release_v0.5.0.tar.gz
 
 Update the "rootfs.img" file in "~/frcrk_5.0/share":
 ```
-cd share 
+cd ~/frcrk_5.0/share 
 rm rootfs.img
 wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1RdjhdEm6ORHTZpAt6zKy4NvDMdHdTvNy" -O rootfs.img
 ```
@@ -67,6 +67,7 @@ sudo ip link set dev tapTestFc up
 Run Firecracker 
 
 ```
+cd ~/frcrk_5.0/
 sudo rm fc.sock 
 sudo VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/plugins/exec/libvaccel-exec.so LD_LIBRARY_PATH=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/src/ ./bin/firecracker --api-sock fc.sock --config-file ./share/config_vsock.json --seccomp-level 0
 ```
@@ -75,21 +76,21 @@ Login = root + ENTER
 
 
 
-get the agent binary: 
-[vaccert-agent](https://drive.google.com/file/d/10MD12lv-kwPpE9dE5NZRB8wO6XdXo_8c/view?usp=share_link)
+Open a new terminal.
 
-Make it executable: 
+Get the agent binary and make it executable: 
 ```
+cd
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=10MD12lv-kwPpE9dE5NZRB8wO6XdXo_8c' -O vaccelrt-agent
 chmod +x vaccelrt-agent
 ```
 
-Host: 
+
+Run on this terminal the agent:
 ```
+cd
 sudo rm /tmp/vaccel.sock_2048 
 sudo rm /tmp/vaccel.sock 
-```
-
-```
 export VACCEL_BACKENDS=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/plugins/noop/libvaccel-noop.so
 export LD_LIBRARY_PATH=/home/ubuntu/frcrk_5.0/lib:$LD_LIBRARY_PATH
 export VACCEL_AGENT_ENDPOINT=unix:///tmp/vaccel.sock_2048
@@ -97,7 +98,7 @@ export VACCEL_AGENT_ENDPOINT=unix:///tmp/vaccel.sock_2048
 ```
 
 
-guest:
+Run the application on Firecracker:
 ```
 sudo rm /tmp/vaccel.sock 
 sudo rm fc.sock
