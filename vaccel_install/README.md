@@ -18,7 +18,7 @@ For the ZCU104 board, labs one to three must be done in order to install the fra
 These labs are the same ones available on the vAccel GitHub, and the instructions must be followed without any modifications, observing that:
 * LAB 2: You must include these lines at the beginning of the file "vaccel.c":
 
-```#include <error.h>```\
+```#include <error.h>``` 
 ```#include <ops/vaccel_ops.h>```
 
 * LAB 3-A: You don't need to clone the reference code if you went through LABs 1 and 2.
@@ -39,18 +39,18 @@ Lab 4 on the vAccel website targets an x86 machine. The modified instructions fo
 
 Create a folder to store the Firecracker files, download and uncompress them:  
 ```
-mkdir frcrk_5.0\
-cd frcrk_5.0\
-wget https://drive.google.com/file/d/1hQF_kHSmi7S_mvXjpHJQGQqhVhG7udmp/view?usp=share_link\
+mkdir frcrk_5.0 
+cd frcrk_5.0 
+wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1hQF_kHSmi7S_mvXjpHJQGQqhVhG7udmp" -O vaccel_aarch64_Release_v0.5.0
 tar -xvf vaccel_aarch64_Release_v0.5.0.tar.gz
 ```
 
 
 Update the "rootfs.img" file in "~/frcrk_5.0/share":
 ```
-cd share\
+cd share 
 rm rootfs.img
-wget https://drive.google.com/file/d/1RdjhdEm6ORHTZpAt6zKy4NvDMdHdTvNy/view?usp=share_link
+wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1RdjhdEm6ORHTZpAt6zKy4NvDMdHdTvNy" -O rootfs.img
 ```
 
 
@@ -75,7 +75,7 @@ Login = root + ENTER
 
 
 
-get the agent binary: \
+get the agent binary: 
 [vaccert-agent](https://drive.google.com/file/d/10MD12lv-kwPpE9dE5NZRB8wO6XdXo_8c/view?usp=share_link)
 
 Make it executable: 
