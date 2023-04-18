@@ -100,6 +100,6 @@ Now it is possible to run te application inside Firecracker, on the first termin
 LD_LIBRARY_PATH=. VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/opt/vaccel/lib/libvaccel-vsock.so ./wrapper-args-vaccel
 ```
 
-This application can be accelerated using a hardware kernel implemented in the FPGA resources.   
+This application can be accelerated using a hardware kernel implemented in the FPGA resources. I is necessary to implement a [Hardware Acceleration Platform](https://github.com/ELHorta/HW-Accel-APP-VM/blob/main/zcu104_hw_platform) to host this hardware kernel. 
  
 
