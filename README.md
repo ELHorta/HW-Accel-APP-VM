@@ -18,7 +18,7 @@ The tutorial is divided into five parts:
 
 [Booting Ubuntu 22.04 on ZCU104](/boot)
 
-[vAccel Installation](/vaccel_install)
+[vAccel Installation (No Hardware Acceleration)](/vaccel_install) 
 
 [ZCU104 Hardware Acceleration Platform](/zcu104_hw_platform)
 
