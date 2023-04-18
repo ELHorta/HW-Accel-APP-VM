@@ -55,7 +55,6 @@ wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-
 ```
 
 
-
 A network interface must be defined to transfer files between the host and the VM:
 ```
 sudo ip tuntap add dev tapTestFc mode tap 
