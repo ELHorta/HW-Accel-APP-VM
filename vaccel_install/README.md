@@ -35,9 +35,9 @@ https://github.com/nubificus/vaccel-tutorials
 ---  
 ### LAB 4 (Targeting ARM Processors)
 
-Lab 4 on the vAccel website targets an x86 machine. The modified instructions for running the examples on the ZCU104 can be seen in the following paragraphs.
+This is a modified version of the Lab 4 available on the vAccel website. This version uses a ZCU104 board to run the applications.
 
-Create a folder to store the Firecracker files, download and uncompress them:  
+Te first step is to create a folder to store the Firecracker files, download and uncompress them:  
 ```
 mkdir frcrk_5.0 
 cd frcrk_5.0 
@@ -45,8 +45,7 @@ wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-
 tar -xvf vaccel_aarch64_Release_v0.5.0.tar.gz
 ```
 
-
-Update the "rootfs.img" file in "~/frcrk_5.0/share":
+The original "rootfs.img" file must be updated in "~/frcrk_5.0/share":
 ```
 cd ~/frcrk_5.0/share 
 rm rootfs.img
@@ -54,31 +53,26 @@ wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-
 ```
 
 
-The first step is to define a network interface that will be used to transfer files between the host and the VM:
 
+The first step is to define a network interface that will be used to transfer files between the host and the VM:
 ```
 sudo ip tuntap add dev tapTestFc mode tap 
 sudo ip addr add dev tapTestFc 172.42.0.1/24 
 sudo ip link set dev tapTestFc up
 ```
 
-
-
-Run Firecracker 
-
+Now it is possible to open a new terminal and run the VM:
 ```
 cd ~/frcrk_5.0/
 sudo rm fc.sock 
 sudo VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/plugins/exec/libvaccel-exec.so LD_LIBRARY_PATH=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/src/ ./bin/firecracker --api-sock fc.sock --config-file ./share/config_vsock.json --seccomp-level 0
 ```
 
-Login = root + ENTER
+When prompted for a user/passwod to login, just se root, without a password.
 
+Before running the applications on the VM, it s necessary to run the vaccelrt-agent in a second terminal. More details can be fond [here](https://docs.vaccel.org/vm-example/#running-the-vaccelrt-agent).
 
-
-Open a new terminal.
-
-Get the agent binary and make it executable: 
+On the second terminal, get the agent binary and make it executable: 
 ```
 cd
 mkdir vaccel_agent
@@ -88,7 +82,7 @@ chmod +x vaccelrt-agent
 ```
 
 
-Run on this terminal the agent:
+Then, run Vaccel agent:
 ```
 cd ~/vaccel_agent
 sudo rm /tmp/vaccel.sock_2048 
@@ -98,12 +92,11 @@ export VACCEL_AGENT_ENDPOINT=unix:///tmp/vaccel.sock_2048
 ./vaccelrt-agent -a $VACCEL_AGENT_ENDPOINT
 ```
 
-
-Run the application on Firecracker:
+Now it is possible to run te application inside Firecracker, on the first terminal
 ```
 LD_LIBRARY_PATH=. VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/opt/vaccel/lib/libvaccel-vsock.so ./wrapper-args-vaccel
 ```
 
-
+This application can be accelerated using a hardware kernel implemented in the FPGA resources.   
 
 
