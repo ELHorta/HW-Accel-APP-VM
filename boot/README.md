@@ -45,4 +45,4 @@ You must receive the following:
 
 
 
-You can now proceed to the [vAccel Installation](https://github.com/ELHorta/VM-Migration-With-Hardware-Acceleration/wiki/vAccel-Installation-(No-Hardware-Acceleration))
+You can now proceed to the [vAccel Installation](https://github.com/ELHorta/HW-Accel-APP-VM/tree/main/vaccel_install)
