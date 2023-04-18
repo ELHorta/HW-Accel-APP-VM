@@ -99,7 +99,7 @@ PAC configurations present in the system:
 ```
 
 
-The board is now ready to run host applications using hardware acceleration.
+The board is now ready to run [host applications](https://github.com/ELHorta/HW-Accel-APP-VM/blob/main/zcu104_hw_acceleration) using hardware acceleration.
 
 
 
