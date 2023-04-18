@@ -98,5 +98,5 @@ LD_LIBRARY_PATH=. VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/opt/vaccel/lib/libvaccel
 ```
 
 This application can be accelerated using a hardware kernel implemented in the FPGA resources.   
-
+ 
 
