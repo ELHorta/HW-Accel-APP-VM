@@ -35,7 +35,8 @@ https://github.com/nubificus/vaccel-tutorials
 ---  
 ### LAB 4 (Targeting ARM Processors)
 
-This is a modified version of the Lab 4 available on the vAccel website. This version uses a ZCU104 board to run the applications.
+This is a modified version of the Lab 4 available on the vAccel website. This version uses a ZCU104 board to run the applications. 
+
 
 Te first step is to create a folder to store the Firecracker files, download and uncompress them:  
 ```
@@ -44,7 +45,8 @@ cd frcrk_5.0
 wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1hQF_kHSmi7S_mvXjpHJQGQqhVhG7udmp" -O vaccel_aarch64_Release_v0.5.0
 tar -xvf vaccel_aarch64_Release_v0.5.0.tar.gz
 ```
-
+ 
+ 
 The original "rootfs.img" file must be updated in "~/frcrk_5.0/share":
 ```
 cd ~/frcrk_5.0/share 
@@ -54,13 +56,14 @@ wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-
 
 
 
-The first step is to define a network interface that will be used to transfer files between the host and the VM:
+A network interface must be defined to transfer files between the host and the VM:
 ```
 sudo ip tuntap add dev tapTestFc mode tap 
 sudo ip addr add dev tapTestFc 172.42.0.1/24 
 sudo ip link set dev tapTestFc up
 ```
-
+ 
+ 
 Now it is possible to open a new terminal and run the VM:
 ```
 cd ~/frcrk_5.0/
@@ -68,7 +71,8 @@ sudo rm fc.sock
 sudo VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/plugins/exec/libvaccel-exec.so LD_LIBRARY_PATH=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/src/ ./bin/firecracker --api-sock fc.sock --config-file ./share/config_vsock.json --seccomp-level 0
 ```
 
-When prompted for a user/passwod to login, just se root, without a password.
+When prompted for a user/passwod to login, just se root, without a password. 
+
 
 Before running the applications on the VM, it s necessary to run the vaccelrt-agent in a second terminal. More details can be fond [here](https://docs.vaccel.org/vm-example/#running-the-vaccelrt-agent).
 
