@@ -39,8 +39,8 @@ You can also follow these steps to install the required files:
 ```     
 cd
 sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1CrIYQGg4TBye9ZVt0ZVt8h-IcW4wl1lq' -O xlxn-conf.tar.gz
-cd /boot/firmware/
 sudo mv xlxn-conf.tar.gz /boot/firmware/
+cd /boot/firmware/
 sudo tar -zxvf xlxn-conf.tar.gz
 ```         
 
