@@ -42,7 +42,7 @@ The folder structure is shown bellow:
 You can also follow these steps to install the required files:
 ```     
 cd /boot/firmware/
-sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1m-hYhy10eVcb-DGR4UTCXGwtuwkOFUVf' -O xlnx-conf.tar.gz
+sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1fDocnqXKMgLvmDC0PscDN-D16mT_y1c7' -O xlnx-conf.tar.gz
 sudo tar -zxvf xlnx-conf.tar.gz
 sudo rm xlnx-conf.tar.gz
 ```         
