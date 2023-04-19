@@ -18,6 +18,7 @@ After running Steps 1 and 2 of the Xilinx Tutorial, the files needed will be ava
 
 ### Platform Deployment (SNAP) ###
 There are six files that must be copied to a specific folder structure. Along with these files, a manifest file must also be created.
+More details can be found on [Xilinx Wiki] (https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/2057043969/Snaps+-+xlnx-config+Snap+for+Certified+Ubuntu+on+Xilinx+Devices).
 
 The folder structure is shown bellow:
 
@@ -34,9 +35,12 @@ The folder structure is shown bellow:
                                                     └-- bl31.elf
 ```         
 
-A set o files ready to be used can be found here:
-
-[ZCU104 Platform Files](https://drive.google.com/drive/folders/15MmE8C17n_ZY8ACJh5jjW4K7eWNIAx8c?usp=share_link)
+You can also follow these steps to install the required files:
+```         
+cd /boot/firmware/
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1CrIYQGg4TBye9ZVt0ZVt8h-IcW4wl1lq' -O xlxn-conf.tar.gz
+tar -zxvf xlxn-conf.tar.gz
+```         
 
 
 After copying these files, the xlxn-config snap tool must be used to load the hardware acceleration platform into the ZCU104 board.
