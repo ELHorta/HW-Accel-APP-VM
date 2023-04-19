@@ -23,7 +23,8 @@ The folder structure is shown bellow:
 
 ```
 /boot/firmware/xlxn-config/pac/hwconfig 
-                                     |---- cfg1 ---- manifest.yaml
+                                     |---- cfg1 
+                                             |-- manifest.yaml
                                              |-- zcu104 ---- 
                                                     |-- bootgen.bif
                                                     |-- system.dtb
