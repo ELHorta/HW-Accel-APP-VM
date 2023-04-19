@@ -35,10 +35,13 @@ The folder structure is shown bellow:
                                                     └-- bl31.elf
 ```         
 
+
+
+https://drive.google.com/file/d/1o5fUjreRxLoo9rP1FW2KwLEkR3qEH2-h/view?usp=share_link
 You can also follow these steps to install the required files:
 ```     
 cd
-sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1CrIYQGg4TBye9ZVt0ZVt8h-IcW4wl1lq' -O xlxn-conf.tar.gz
+sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1o5fUjreRxLoo9rP1FW2KwLEkR3qEH2-h' -O xlxn-conf.tar.gz
 sudo mv xlxn-conf.tar.gz /boot/firmware/
 cd /boot/firmware/
 sudo tar -zxvf xlxn-conf.tar.gz
