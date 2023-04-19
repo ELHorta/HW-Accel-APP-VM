@@ -23,7 +23,7 @@ More details can be found on [Xilinx Wiki] (https://xilinx-wiki.atlassian.net/wi
 The folder structure is shown bellow:
 
 ```
-/boot/firmware/xlxn-config/pac/hwconfig 
+/boot/firmware/xlnx-config/pac/hwconfig 
                                      |---- cfg1 
                                              |-- manifest.yaml
                                              |-- zcu104 ---- 
@@ -42,9 +42,9 @@ The folder structure is shown bellow:
 You can also follow these steps to install the required files:
 ```     
 cd /boot/firmware/
-sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1m-hYhy10eVcb-DGR4UTCXGwtuwkOFUVf' -O xlxn-conf.tar.gz
-sudo tar -zxvf xlxn-conf.tar.gz
-sudo rm xlxn-conf.tar.gz
+sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1m-hYhy10eVcb-DGR4UTCXGwtuwkOFUVf' -O xlnx-conf.tar.gz
+sudo tar -zxvf xlnx-conf.tar.gz
+sudo rm xlnx-conf.tar.gz
 ```         
 
 
