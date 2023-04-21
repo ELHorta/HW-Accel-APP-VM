@@ -69,7 +69,7 @@ PAC configurations present in the system:
 
 | PAC Cfg                       |Act| zcu104 Assets Directory
 ---------------------------------------------------------------------------------------------------------------
-| zcu104-platform-cfg1             |   | /boot/firmware/xlnx-config/test_pac/hwconfig/cfg1/zcu104
+| zcu104-platform-cfg1             |   | /boot/firmware/xlnx-config/pac/hwconfig/cfg1/zcu104
 ---------------------------------------------------------------------------------------------------------------
 
 * No configuration is currently activated *
@@ -104,7 +104,7 @@ PAC configurations present in the system:
 
 | PAC Cfg                       |Act| zcu104 Assets Directory
 ---------------------------------------------------------------------------------------------------------------
-| zcu104-platform-cfg1          | * | /boot/firmware/xlnx-config/test_pac/hwconfig/cfg1/zcu104
+| zcu104-platform-cfg1          | * | /boot/firmware/xlnx-config/pac/hwconfig/cfg1/zcu104
 ---------------------------------------------------------------------------------------------------------------
 ```
 
