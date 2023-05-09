@@ -13,7 +13,7 @@ The first step is create a folder and copy the required files to this folder:
 
 ```
 mkdir xclbin_vadd
-cd xclbin_vadd 
+cd xclbin_vadd  ``\
 sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1rOQhjtGtkARlSGK3MssCCIHKSXa_Vgqf' -O zcu104_custom_platform_hw.xsa
 sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1Xi5XFbTC74Mn_RW8HoCRiHgtQRxto111' -O krnl_vadd.cpp
 
@@ -51,19 +51,19 @@ The
 ```
 mkdir vadd_krnl_host_app
 cd vadd_krnl_host_app
-wget sources
+wget sources ``\
 g++ -O0 -Wall -g  -I ./src/ src/vadd_host* -lOpenCL -lpthread -lm -o host_vadd
 ```
 
 
 If everythiong is correct, 
 
-ubuntu@zynqmp:~/vadd_debug$ ./host_vadd 
-INFO: Reading krnl_vadd.xclbin
-Loading: 'krnl_vadd.xclbin'
-Trying to program device[0]: edge
-Device[0]: program successful!
-TEST PASSED
+``ubuntu@zynqmp:~/vadd_debug$ ./host_vadd ``\
+``INFO: Reading krnl_vadd.xclbin ``\
+``Loading: 'krnl_vadd.xclbin' ``\
+``Trying to program device[0]: edge ``\
+``Device[0]: program successful! ``\
+``TEST PASSED ``
 
 Now it is possible to libify the hardware kernel.
 
