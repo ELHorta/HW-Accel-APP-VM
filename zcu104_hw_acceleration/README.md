@@ -33,7 +33,7 @@ Here you can find an XCLBIN file ready to be used, containing a hardware kernel 
 
 ```
 sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1rOQhjtGtkARlSGK3MssCCIHKSXa_Vgqf' -O zcu104_custom_platform_hw.xsa
-
+```
 
 
 
