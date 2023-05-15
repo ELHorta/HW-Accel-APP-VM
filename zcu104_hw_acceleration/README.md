@@ -63,7 +63,7 @@ If everything is correct, you will get the following messages:
 ``TEST PASSED ``
 
 Now it is possible to libify the hardware kernel.
-
+https://github.com/ELHorta/HW-Accel-APP-VM/tree/main/zcu104_vm_hw_accel
 
 
 
