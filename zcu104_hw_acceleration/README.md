@@ -28,37 +28,39 @@ v++ -t hw --platform zcu104_custom_platform_hw.xsa -c -k krnl_vadd -o krnl_vadd.
 v++ -t hw --platform zcu104_custom_platform_hw.xsa -l -o krnl_vadd.xclbin krnl_vadd.xo
 ```
 
-The XCLBIN file generation takes approximately 30 minutes.
-Here you can find an XCLBIN file ready to be used, containing a hardware kernel of the vector addition function:
-
-```
-sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1rOQhjtGtkARlSGK3MssCCIHKSXa_Vgqf' -O zcu104_custom_platform_hw.xsa
-```
+The XCLBIN file generation takes approximately 30 minutes. A ready to be used XCLBIN file is available (see next step).
 
 
 
 ### Host Application (ZCU104)  
 
 The host application will call the OpenCL APIs that are responsible for the FPGA reconfiguration with the XCLBIN file generated in the previous step.
-Here you can find an XCLBIN file ready to be used, containing a hardware kernel of the vector addition function:
+
+The following commands create a folde to download the XCLBIN file and the source code for the host application:
 
 ```
+cd
+mkdir vadd_host_app
+cd vadd_host_app
 sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1Hz2ivkogkafMEf8sHQ4V34VFcA7upe0l' -O krnl_vadd.xclbin
+sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1Hz2ivkogkafMEf8sHQ4V34VFcA7upe0l' -O vadd_host.cpp
+sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1Hz2ivkogkafMEf8sHQ4V34VFcA7upe0l' -O vadd_host_load_krnl.cpp
+sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1Hz2ivkogkafMEf8sHQ4V34VFcA7upe0l' -O vadd.h
 ```
 
-The 
-
+To compile the host application, use this command
 ```
-mkdir vadd_krnl_host_app
-cd vadd_krnl_host_app
-wget sources ``\
-g++ -O0 -Wall -g  -I ./src/ src/vadd_host* -lOpenCL -lpthread -lm -o host_vadd
+g++ -O0 -Wall -g  -I ./ vadd_host* -lOpenCL -lpthread -lm -o host_vadd
 ```
 
+Now you can run the host application:
+```
+./host_app
+```
 
-If everythiong is correct, 
+If everything is correct, ou will get the following messages: 
 
-``ubuntu@zynqmp:~/vadd_debug$ ./host_vadd ``\
+``ubuntu@zynqmp:~/vadd_host_app$ ./host_vadd ``\
 ``INFO: Reading krnl_vadd.xclbin ``\
 ``Loading: 'krnl_vadd.xclbin' ``\
 ``Trying to program device[0]: edge ``\
