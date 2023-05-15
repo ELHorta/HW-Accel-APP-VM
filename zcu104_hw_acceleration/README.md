@@ -1,16 +1,12 @@
 # **ZCU104 Hardware Acceleration** 
 
-
-The files are modifications of the Xilinx tutoirial
-
-Before running the application using hardware acceleration, The configuration file containing the hardware kernel and the drivers to communicate with the FPGA must be generated using the Vitis tools. The files needed are the description of the hardware kernel in a high level language, such as C, and the the FPGA infrastructure definition.
+Before running the application using hardware acceleration, the configuration file containing the hardware kernel and the drivers to communicate with the FPGA must be generated using the Vitis tools. The files needed are the description of the hardware kernel in a high level language, such as C, and the the FPGA infrastructure definition.
 
 
 ### HW Kernel (Vitis) 
 The hardware kernel must be generated in a machine where the Vitis tools are installed.
 
 The first step is to create a folder and copy the required files to this folder:
-
 ```
 mkdir xclbin_vadd
 cd xclbin_vadd  ``\
@@ -35,7 +31,7 @@ The XCLBIN file generation takes approximately 30 minutes. A ready to be used XC
 
 The host application will call the OpenCL APIs that are responsible for the FPGA reconfiguration with the XCLBIN file generated in the previous step.
 
-The following commands create a folde to download the XCLBIN file and the source code for the host application:
+The following commands create a folder to download the XCLBIN file and the source code for the host application:
 
 ```
 cd
@@ -57,7 +53,7 @@ Now you can run the host application:
 ./host_app
 ```
 
-If everything is correct, ou will get the following messages: 
+If everything is correct, you will get the following messages: 
 
 ``ubuntu@zynqmp:~/vadd_host_app$ ./host_vadd ``\
 ``INFO: Reading krnl_vadd.xclbin ``\
