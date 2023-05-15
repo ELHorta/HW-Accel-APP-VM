@@ -62,9 +62,7 @@ If everything is correct, you will get the following messages:
 ``Device[0]: program successful! ``\
 ``TEST PASSED ``
 
-Now it is possible to libify the hardware kernel.
-https://github.com/ELHorta/HW-Accel-APP-VM/tree/main/zcu104_vm_hw_accel
-
+Now it is possible to run the application using hardware acceleration, [Inside a Virtual Machine](/zcu104_vm_hw_accel)
 
 
 
