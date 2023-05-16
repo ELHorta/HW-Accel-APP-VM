@@ -1,28 +1,23 @@
 # **ZCU104 Hardware Acceleration Inside a Virtual Machine** 
 
 
-Now that we have the hardware kernel that implments the vector addition, it is possible to run the host inside the AWS Firecracker, with the options of executing the function in the ARM, or accelerate it in the FPGA fabric.
+Now that we have the hardware kernel that implements the vector addition, it is possible to run the host application inside the AWS Firecracker, with the options of executing the function in the ARM, or accelerate it in the FPGA fabric.
 
-The first step is to libify the accelerated function, generating two shared libraries, one that executes the function in the processor, and another one that executes it in the FPGA. This is done following the LAB 3 instructions. After that, using the directions fom LAB 4, it is possible to run the host application inside the VM, poiting to the shared library containing the vector addition function. There are two shared libraries with the same vector addition function, one that uns in software, and other that runs in hardware.
+The first step is to libify the accelerated function, generating two shared libraries, one that executes the function in the processor, and another one that executes it in the FPGA. This is done following the LAB 3 instructions. 
 
-
-
-
-### vector  addition sharing library (no hardware acceleration) 
+After that, using the directions fom LAB 4, it is possible to run the host application inside the VM, poiting to the shared library containing the vector addition function. There are two shared libraries with the same vector addition function, one that uns in software, and other that runs in hardware.
 
 
-### vector  addition sharing library (hardware acceleration) 
 
 
-LAB 3
+### Vector  Addition Shared Library (no hardware acceleration) 
 
-Libify 
 
-Generate two shared libraries (with and without HW Accel)
+### Vector  Addition Shared Library (hardware acceleration) 
 
-LAB 4
 
-Firecracker with HW kernel
+### Running the Host Application on Firecracker
+
 
 
 
