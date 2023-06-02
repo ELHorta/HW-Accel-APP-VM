@@ -71,7 +71,7 @@ C:  0  2  4  3  5  7  6  8 10  9
 Modify the source code:
 
 ```
-patch -R app_zcu104/vadd_zcu104/vector_add/vector_add.cpp vector_vadd.patch
+patch -R vadd_zcu104/vector_add/vector_add.cpp vector_vadd.patch
 ```
 
 Create the shared library with hardware acceleration and copy it to the /tmp folder:
