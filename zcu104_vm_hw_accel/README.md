@@ -78,7 +78,6 @@ Create the shared library with hardware acceleration and copy it to the /tmp fol
 
 ```
 cd vadd_zcu104/
-mkdir build 
 cd build
 cmake ../
 make
