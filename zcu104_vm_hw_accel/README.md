@@ -28,7 +28,7 @@ tar -xvf app_zcu104.tar
 Create the shared library and copy it to the /tmp folder:
 
 ```
-cd app_zcu104/vadd_no_hw_accel/
+cd app_zcu104/vadd_zcu104/
 mkdir build 
 cd build
 cmake ../
@@ -67,6 +67,52 @@ C:  0  2  4  3  5  7  6  8 10  9
 
 
 ### Vector  Addition Shared Library (hardware acceleration) 
+
+
+Modify the source code:
+
+```
+patch -R app_zcu104/vadd_zcu104/vector_add/vector_add.cpp vector_vadd.patch
+```
+
+Create the shared library with hardware acceleration and copy it to the /tmp folder:
+
+```
+cd vadd_zcu104/
+mkdir build 
+cd build
+cmake ../
+make
+cp vector_add/libvector_add.so /tmp/
+```
+
+
+Run the application:
+```
+VACCELL_DEBUG_LEVEL=4 LD_LIBRARY_PATH=.:../vaccelrt/build/src/ VACCEL_BACKENDS=../vaccelrt/build/plugins/exec/libvaccel-exec.so ./wrapper-args-vaccel
+```
+
+The output should be this one:
+
+
+```
+Initialized session with id: 1
+INFO: Reading krnl_vadd.xclbin
+Loading: 'krnl_vadd.xclbin'
+Trying to program device[0]: edge
+Device[0]: program successful!
+Result (HW): 
+0 2 4 3 5 7 6 8 10 9 
+Operation successful!
+A:  0  1  2  3  4  5  6  7  8  9 
++
+B:  0  1  2  0  1  2  0  1  2  0 
+=
+C:  0  2  4  3  5  7  6  8 10  9
+
+```
+
+
 
 
 ### Running the Host Application on Firecracker
