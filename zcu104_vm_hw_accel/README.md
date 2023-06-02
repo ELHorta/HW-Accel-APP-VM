@@ -87,6 +87,7 @@ cp vector_add/libvector_add.so /tmp/
 
 Run the application:
 ```
+cd ../../
 VACCELL_DEBUG_LEVEL=4 LD_LIBRARY_PATH=.:../vaccelrt/build/src/ VACCEL_BACKENDS=../vaccelrt/build/plugins/exec/libvaccel-exec.so ./wrapper-args-vaccel
 ```
 
