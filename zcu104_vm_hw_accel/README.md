@@ -166,38 +166,13 @@ LD_LIBRARY_PATH=. VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/opt/vaccel/lib/libvaccel
 
 These result of the vector addition can be seen on this terminal, along with the debug messages:
 ```
-2023.06.05-18:12:06.98 - <debug> Initializing vAccel
-2023.06.05-18:12:06.98 - <debug> Created top-level rundir: /run/user/0/vaccel.Irr9ny
-2023.06.05-18:12:06.00 - <debug> Registered plugin vsock
-2023.06.05-18:12:07.00 - <debug> vsock is a VirtIO module
-2023.06.05-18:12:07.01 - <debug> Registered function image classification from plugin vsock
-2023.06.05-18:12:07.01 - <debug> Registered function image detection from plugin vsock
-2023.06.05-18:12:07.02 - <debug> Registered function image segmentation from plugin vsock
-2023.06.05-18:12:07.02 - <debug> Registered function image depth estimation from plugin vsock
-2023.06.05-18:12:07.03 - <debug> Registered function image pose estimation from plugin vsock
-2023.06.05-18:12:07.03 - <debug> Registered function TensorFlow session load from plugin vsock
-2023.06.05-18:12:07.04 - <debug> Registered function TensorFlow session delete from plugin vsock
-2023.06.05-18:12:07.04 - <debug> Registered function TensorFlow session run from plugin vsock
-2023.06.05-18:12:07.05 - <debug> Registered function exec from plugin vsock
-2023.06.05-18:12:07.05 - <debug> Loaded plugin vsock from /opt/vaccel/lib/libvaccel-vsock.so
-2023.06.05-18:12:07.06 - <debug> [vsock] Initializing session
-2023.06.05-18:12:07.06 - <debug> [vsock] New session 1
-2023.06.05-18:12:07.07 - <debug> session:1 New session
 Initialized session with id: 1
-2023.06.05-18:12:07.07 - <debug> session:1 Looking for plugin implementing exec
-2023.06.05-18:12:07.07 - <debug> Found implementation in vsock plugin
-2023.06.05-18:12:07.36 - <debug> [vsock] Destroying session 1
-2023.06.05-18:12:07.36 - <debug> [vsock] Destroying vsock client
-2023.06.05-18:12:07.37 - <debug> session:1 Free session
 Operation successful!
 A:  0  1  2  3  4  5  6  7  8  9 
 +
 B:  0  1  2  0  1  2  0  1  2  0 
 =
-C:  0  2  4  3  5  7  6  8 10  9 
-2023.06.05-18:12:07.37 - <debug> Shutting down vAccel
-2023.06.05-18:12:07.38 - <debug> Cleaning up plugins
-2023.06.05-18:12:07.38 - <debug> Unregistered plugin vsock
+C:  0  2  4  3  5  7  6  8 10  9
 ```
 
 On the terminal that is running the Vaccel agent, it is possible to see the XCLBIN file being loaded into the FPGA, before the function is called by the application:
