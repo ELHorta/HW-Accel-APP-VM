@@ -134,6 +134,8 @@ sudo VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/home/ubuntu/vaccel-tutorial-code/vacc
 ```
 
 When prompted for a user/passwod to login, just se root, without a password. 
+
+The next step is to copy the executables and binaries to a new folder on the VIrtual Machine:
 ```
 mkdir vm_zcu104
 cd vm_zcu104
