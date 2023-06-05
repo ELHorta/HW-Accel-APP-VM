@@ -200,7 +200,7 @@ C:  0  2  4  3  5  7  6  8 10  9
 2023.06.05-18:12:07.38 - <debug> Unregistered plugin vsock
 ```
 
-On the terminal that is running the Vaccel agent, it is possible to see the hardware accelerated function being called by the application:
+On the terminal that is running the Vaccel agent, it is possible to see the XCLBIN file being loaded into the FPGA, before the function is called by the application:
 ```
 vaccel ttRPC server started. address: unix:///tmp/vaccel.sock_2048
 Server is running, press Ctrl + C to exit
