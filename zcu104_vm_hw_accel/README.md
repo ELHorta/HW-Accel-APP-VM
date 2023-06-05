@@ -161,7 +161,7 @@ export VACCEL_AGENT_ENDPOINT=unix:///tmp/vaccel.sock_2048
 
 Now it is possible to run the application inside Firecracker, on the first terminal:
 ```
-LD_LIBRARY_PATH=. VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/opt/vaccel/lib/libvaccel-vsock.so ./wrapper-args-vaccel
+LD_LIBRARY_PATH=. VACCEL_BACKENDS=/opt/vaccel/lib/libvaccel-vsock.so ./wrapper-args-vaccel
 ```
 
 These result of the vector addition can be seen on this terminal, along with the debug messages:
