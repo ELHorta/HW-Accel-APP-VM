@@ -116,7 +116,58 @@ C:  0  2  4  3  5  7  6  8 10  9
 
 ### Running the Host Application on Firecracker
 
+The following steps are similar to the LAB 4 (Targeting ARM Processors) found [here](https://github.com/ELHorta/HW-Accel-APP-VM/tree/main/vaccel_install#lab-4-targeting-arm-processors).
 
+If the network interface "tapTestFc" is not present, then follow these steps:
+
+```
+sudo ip tuntap add dev tapTestFc mode tap 
+sudo ip addr add dev tapTestFc 172.42.0.1/24 
+sudo ip link set dev tapTestFc up
+```
+ 
+Now it is possible to open a new terminal and run the VM:
+```
+cd ~/frcrk_5.0/
+sudo rm fc.sock 
+sudo VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/plugins/exec/libvaccel-exec.so LD_LIBRARY_PATH=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/src/ ./bin/firecracker --api-sock fc.sock --config-file ./share/config_vsock.json --seccomp-level 0
+```
+
+When prompted for a user/passwod to login, just se root, without a password. 
+
+```
+mkdir vm_zcu104
+cd vm_zcu104
+scp ubuntu@172.42.0.1:~/vaccel-tutorial-code/app_zcu104/libwrapper-args.so .
+scp ubuntu@172.42.0.1:~/vaccel-tutorial-code/app_zcu104/wrapper-args-vaccel .
+scp ubuntu@172.42.0.1:~/vaccel-tutorial-code/app_zcu104/xrt.ini .
+cp ../libvaccel.so .
+```
+
+Before running the applications on the VM, it s necessary to run the vaccelrt-agent in a second terminal. More details can be fond [here](https://docs.vaccel.org/vm-example/#running-the-vaccelrt-agent).
+
+The XCLBIN file containing the hardware accelerated function must also be copied to the same folder as the Vaccel agent:
+```
+cd ~/vaccel_agent
+cp ../vaccel-tutorial-code/app_zcu104/krnl_vadd.xclbin .
+cp ../vaccel-tutorial-code/app_zcu104/xrt.ini .
+sudo rm /tmp/vaccel.sock*
+export VACCEL_BACKENDS=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/plugins/exec/libvaccel-exec.so
+export LD_LIBRARY_PATH=/home/ubuntu/frcrk_5.0/lib:$LD_LIBRARY_PATH
+export VACCEL_AGENT_ENDPOINT=unix:///tmp/vaccel.sock_2048
+./vaccelrt-agent -a $VACCEL_AGENT_ENDPOINT
+```
+
+Now it is possible to run te application inside Firecracker, on the first terminal
+```
+LD_LIBRARY_PATH=. VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/opt/vaccel/lib/libvaccel-vsock.so ./wrapper-args-vaccel
+```
+
+
+
+```
+cp 
+```
 
 
 
