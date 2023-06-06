@@ -24,9 +24,6 @@ sudo wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --
 tar -xvf app_zcu104.tar 
 ```
 
-sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1oaF7wjBa8O2ktWXzNPz1n5NvyxUrNcyV' -O app_zcu104.tar
-
-
 Create the shared library and copy it to the /tmp folder:
 
 ```
