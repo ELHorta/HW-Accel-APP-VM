@@ -53,7 +53,7 @@ To install this tool, just run:
 ```
 sudo snap install xlnx-config --classic
 ```
-Note: This installation does not show any messages for a while. 
+Note: This installation does not show any messages for a while.  
 
 
 
