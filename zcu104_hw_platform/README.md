@@ -53,6 +53,8 @@ To install this tool, just run:
 ```
 sudo snap install xlnx-config --classic
 ```
+Note: This installation does not show any messages for a while.
+
 
 This command verifies if the hardware acceleration platform is available for deployment:
 
