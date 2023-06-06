@@ -91,7 +91,7 @@ chmod +x vaccelrt-agent
 Then, run Vaccel agent:
 ```
 cd ~/vaccel_agent
-sudo rm /tmp/vaccel.sock_2048 
+sudo rm /tmp/vaccel.sock*
 export VACCEL_BACKENDS=/home/ubuntu/vaccel-tutorial-code/vaccelrt/build/plugins/noop/libvaccel-noop.so
 export LD_LIBRARY_PATH=/home/ubuntu/frcrk_5.0/lib:$LD_LIBRARY_PATH
 export VACCEL_AGENT_ENDPOINT=unix:///tmp/vaccel.sock_2048
