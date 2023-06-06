@@ -9,7 +9,7 @@ The ZCU104 hardware design must be modified to host the accelerators created by 
 
 It is necessary to create a design that implements a partially reconfigurable area inside the FPGA and the required interfaces to communicate with the microprocessor. 
 
-Use this Xilinx Tutorial to generate the implementation files:
+Use this Xilinx Tutorial to generate the implementation files (or go to the next step, if you want to use pre-generated files):
 
 [Xilinx ZCU104 Platform Creation](https://xilinx.github.io/Vitis-Tutorials/2022-1/build/html/docs/Vitis_Platform_Creation/Design_Tutorials/02-Edge-AI-ZCU104/README.html)
 
@@ -38,7 +38,7 @@ The folder structure is shown bellow:
 
 
 
-You can also follow these steps to install the required files:
+You can also follow these steps to download the pre-generated required files:
 ```     
 cd /boot/firmware/
 sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1uozv6KB8j7-hMPmT-bE6O36lmSfSl0SM' -O xlnx-conf.tar.gz
