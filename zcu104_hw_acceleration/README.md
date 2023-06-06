@@ -56,13 +56,14 @@ Now you can run the host application:
 ```
 
 If everything is correct, you will get the following messages: 
-
-``ubuntu@zynqmp:~/vadd_host_app$ ./host_vadd ``\
-``INFO: Reading krnl_vadd.xclbin ``\
-``Loading: 'krnl_vadd.xclbin' ``\
-``Trying to program device[0]: edge ``\
-``Device[0]: program successful! ``\
-``TEST PASSED ``
+```
+ubuntu@zynqmp:~/vadd_host_app$ ./host_vadd
+INFO: Reading krnl_vadd.xclbin
+Loading: 'krnl_vadd.xclbin'
+Trying to program device[0]: edge
+Device[0]: program successful!
+TEST PASSED
+```
 
 Now it is possible to run the application using hardware acceleration, [Inside a Virtual Machine](/zcu104_vm_hw_accel)
 
