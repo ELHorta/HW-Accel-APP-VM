@@ -45,7 +45,7 @@ Te first step is to create a folder to store the Firecracker files, download and
 cd
 mkdir frcrk_5.0 
 cd frcrk_5.0 
-wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1hQF_kHSmi7S_mvXjpHJQGQqhVhG7udmp" -O vaccel_aarch64_Release_v0.5.0
+wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1hQF_kHSmi7S_mvXjpHJQGQqhVhG7udmp" -O vaccel_aarch64_Release_v0.5.0.tar.gz
 tar -xvf vaccel_aarch64_Release_v0.5.0.tar.gz
 ```
  
