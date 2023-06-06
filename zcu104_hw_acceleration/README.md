@@ -37,6 +37,16 @@ The following commands create a folder to download the XCLBIN file and the sourc
 cd
 mkdir vadd_host_app
 cd vadd_host_app
+sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=19Gd-bvrM5AgwJn5cX0Q8eUBHDOQA5a3U' -O krnl_vadd.xclbin
+sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1hH3H_C2A91ZTJXSPpyfrWSbSfANAyjpe' -O vadd_host.cpp
+sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1jt8Er6U0tIglQ45KzOLsPig9-XrzW88m' -O vadd_host_load_krnl.cpp
+sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1u93StdjjfL3B3CXqHfajXH8b9R8oHXZo' -O vadd.h
+```
+
+
+
+
+
 wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1Hz2ivkogkafMEf8sHQ4V34VFcA7upe0l" -O krnl_vadd.xclbin
 
 wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1Hz2ivkogkafMEf8sHQ4V34VFcA7upe0l" -O vadd_host.cpp
@@ -45,14 +55,7 @@ wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-
 
 wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1Hz2ivkogkafMEf8sHQ4V34VFcA7upe0l" -O vadd.h
 
-```
 
-
-
-sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1Hz2ivkogkafMEf8sHQ4V34VFcA7upe0l' -O krnl_vadd.xclbin
-sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1Hz2ivkogkafMEf8sHQ4V34VFcA7upe0l' -O vadd_host.cpp
-sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1Hz2ivkogkafMEf8sHQ4V34VFcA7upe0l' -O vadd_host_load_krnl.cpp
-sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1Hz2ivkogkafMEf8sHQ4V34VFcA7upe0l' -O vadd.h
 
 To compile the host application, use this command
 ```
