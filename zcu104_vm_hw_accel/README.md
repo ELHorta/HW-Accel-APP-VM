@@ -18,11 +18,10 @@ Copy the folders:
 
 ```
 cd ~/vaccel-tutorial-code/
-
-sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1ORrqUtg9ZYkSJXHApifj7RfHGfyvmlOE' -O app_zcu104.tar
-
+sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1oaF7wjBa8O2ktWXzNPz1n5NvyxUrNcyV' -O app_zcu104.tar
 tar -xvf app_zcu104.tar 
 ```
+
 
 Create the shared library and copy it to the /tmp folder:
 
