@@ -18,8 +18,10 @@ For the ZCU104 board, labs one to three must be done in order to install the fra
 These labs are the same ones available on the vAccel GitHub, and the instructions must be followed without any modifications, observing that:
 * LAB 2: You must include these lines at the beginning of the file "vaccel.c":
 
-```#include <error.h>``` 
-```#include <ops/vaccel_ops.h>```
+```
+#include <error.h>
+#include <ops/vaccel_ops.h>
+```
 
 * LAB 3-A: You don't need to clone the reference code if you went through LABs 1 and 2.
 
