@@ -1,4 +1,4 @@
-# **ZCU104 Hardware Acceleration** 
+# **ZCU104 Hardware Acceleration Application** 
 
 Before running the application using hardware acceleration, the configuration file containing the hardware kernel and the drivers to communicate with the FPGA must be generated using the Vitis tools. The files needed are the description of the hardware kernel in a high level language, such as C, and the the FPGA infrastructure definition.
 
