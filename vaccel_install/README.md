@@ -27,7 +27,7 @@ These labs are the same ones available on the vAccel GitHub, and the instruction
 
 * LAB 3-B: During the installation of OpenCL, if it asks to restart some services, just click on "OK"
 
-* LAB 3-C: XRT error message. This happens until you install the Xilinx Hardware Platform (see xxxxxxxx)
+* LAB 3-C: XRT error message. This happens when you run "./vector_add/ocl_vector_add". You can ignore this error and continue to the ""libify" section.
 
 Here is the GitHub link:
 
