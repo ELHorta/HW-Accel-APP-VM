@@ -93,6 +93,18 @@ Activating assets for  zcu104-platform-cfg on the zcu104
 * IMPORTANT: Please reboot the system for the changes to take effect.
 ```
 
+
+This is the command to reboot the machine:
+```
+sudo reboot now
+```
+Note: Sometimes the machine increments its IP after rebooting. 
+
+  
+  
+  
+
+
 After rebooting the system, it is possible to verify if the hardware platform is activated:
 
 ```
