@@ -163,7 +163,7 @@ export VACCEL_AGENT_ENDPOINT=unix:///tmp/vaccel.sock_2048
 ./vaccelrt-agent -a $VACCEL_AGENT_ENDPOINT
 ```
 
-Now it is possible to run the application inside Firecracker, on the first terminal:
+Now it is possible to run the application inside Firecracker, on the **first terminal**:
 ```
 LD_LIBRARY_PATH=. VACCEL_DEBUG_LEVEL=0 VACCEL_BACKENDS=/opt/vaccel/lib/libvaccel-vsock.so ./wrapper-args-vaccel
 ```
