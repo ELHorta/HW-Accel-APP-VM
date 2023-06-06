@@ -46,12 +46,6 @@ sudo tar -xvf xlnx-conf.tar
 sudo rm xlnx-conf.tar
 ```         
 
-
-
-sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1M9-USXmDBG16XktjwmCiN8r_g0gb9ASu' -O xlnx-conf.tar
-
-
-
 After copying these files, the xlxn-config snap tool must be used to load the hardware acceleration platform into the ZCU104 board.
 
 To install this tool, just run:
