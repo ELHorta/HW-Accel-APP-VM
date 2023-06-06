@@ -126,7 +126,7 @@ sudo ip addr add dev tapTestFc 172.42.0.1/24
 sudo ip link set dev tapTestFc up
 ```
  
-Now it is possible to open a new terminal and run the VM:
+Now it is possible to run the VM:
 ```
 cd ~/frcrk_5.0/
 sudo rm fc.sock 
