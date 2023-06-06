@@ -145,7 +145,7 @@ scp ubuntu@172.42.0.1:~/vaccel-tutorial-code/app_zcu104/xrt.ini .
 cp ../libvaccel.so .
 ```
 
-Before running the applications on the VM, it s necessary to run the vaccelrt-agent in a second terminal. More details can be fond [here](https://docs.vaccel.org/vm-example/#running-the-vaccelrt-agent).
+Before running the applications on the VM, it s necessary to run the vaccelrt-agent in a #second terminal#. More details can be fond [here](https://docs.vaccel.org/vm-example/#running-the-vaccelrt-agent).
 
 The XCLBIN file containing the hardware accelerated function must also be copied to the same folder as the Vaccel agent:
 ```
