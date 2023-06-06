@@ -41,11 +41,12 @@ The folder structure is shown bellow:
 You can also follow these steps to download the pre-generated required files:
 ```     
 cd /boot/firmware/
-sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1uozv6KB8j7-hMPmT-bE6O36lmSfSl0SM' -O xlnx-conf.tar.gz
-sudo tar -zxvf xlnx-conf.tar.gz
-sudo rm xlnx-conf.tar.gz
+sudo wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1M9-USXmDBG16XktjwmCiN8r_g0gb9ASu' -O xlnx-conf.tar
+sudo tar -xvf xlnx-conf.tar
+sudo rm xlnx-conf.tar
 ```         
 
+https://drive.google.com/file/d/1M9-USXmDBG16XktjwmCiN8r_g0gb9ASu/view?usp=share_link
 
 After copying these files, the xlxn-config snap tool must be used to load the hardware acceleration platform into the ZCU104 board.
 
