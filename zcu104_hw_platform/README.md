@@ -18,7 +18,7 @@ After running Steps 1 and 2 of the Xilinx Tutorial, the files needed will be ava
 
 ### Platform Deployment (SNAP) ###
 There are six files that must be copied to a specific folder structure. Along with these files, a manifest file must also be created.
-More details can be found on [Xilinx Wiki] (https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/2057043969/Snaps+-+xlnx-config+Snap+for+Certified+Ubuntu+on+Xilinx+Devices).
+More details can be found on [Xilinx Wiki](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/2057043969/Snaps+-+xlnx-config+Snap+for+Certified+Ubuntu+on+Xilinx+Devices).
 
 The folder structure is shown bellow:
 
