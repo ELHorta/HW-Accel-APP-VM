@@ -41,7 +41,7 @@ The folder structure is shown bellow:
 You can also follow these steps to download the pre-generated required files:
 ```     
 cd /boot/firmware/
-wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1M9-USXmDBG16XktjwmCiN8r_g0gb9ASu" -O xlnx-conf.tar
+sudo wget  "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1M9-USXmDBG16XktjwmCiN8r_g0gb9ASu" -O xlnx-conf.tar
 sudo tar -xvf xlnx-conf.tar
 sudo rm xlnx-conf.tar
 ```         
