@@ -164,7 +164,7 @@ Now it is possible to run the application inside Firecracker, on the first termi
 LD_LIBRARY_PATH=. VACCEL_DEBUG_LEVEL=0 VACCEL_BACKENDS=/opt/vaccel/lib/libvaccel-vsock.so ./wrapper-args-vaccel
 ```
 
-These result of the vector addition can be seen on this terminal, along with the debug messages:
+These result of the vector addition can be seen on this terminal:
 ```
 Initialized session with id: 1
 Operation successful!
