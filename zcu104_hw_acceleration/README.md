@@ -52,7 +52,7 @@ g++ -O0 -Wall -g  -I ./ vadd_host* -lOpenCL -lpthread -lm -o host_vadd
 
 Now you can run the host application:
 ```
-./host_app
+./host_vadd
 ```
 
 If everything is correct, you will get the following messages: 
