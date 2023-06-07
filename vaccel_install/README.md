@@ -66,7 +66,7 @@ sudo ip link set dev tapTestFc up
 ```
  
  
-Now it is possible to open a new terminal and run the VM:
+Now it is possible to start Firecracker:
 ```
 cd ~/frcrk_5.0/
 sudo rm fc.sock 
@@ -76,7 +76,8 @@ sudo VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/home/ubuntu/vaccel-tutorial-code/vacc
 When prompted for a user/passwod to login, just se root, without a password. 
 
 
-Before running the applications on the VM, it s necessary to run the vaccelrt-agent in a second terminal. More details can be fond [here](https://docs.vaccel.org/vm-example/#running-the-vaccelrt-agent).
+Before running the applications on the VM, it s necessary to run the vaccelrt-agent in a **second terminal**. 
+More details can be fond [here](https://docs.vaccel.org/vm-example/#running-the-vaccelrt-agent).
 
 On the second terminal, get the agent binary and make it executable: 
 ```
@@ -98,7 +99,7 @@ export VACCEL_AGENT_ENDPOINT=unix:///tmp/vaccel.sock_2048
 ./vaccelrt-agent -a $VACCEL_AGENT_ENDPOINT
 ```
 
-Now it is possible to run te application inside Firecracker, on the first terminal
+Now it is possible to run te application inside Firecracker, on the **first terminal**:
 ```
 LD_LIBRARY_PATH=. VACCEL_DEBUG_LEVEL=4 VACCEL_BACKENDS=/opt/vaccel/lib/libvaccel-vsock.so ./wrapper-args-vaccel
 ```
