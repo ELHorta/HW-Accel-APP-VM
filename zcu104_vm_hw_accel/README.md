@@ -195,7 +195,12 @@ Destroying session VaccelId { inner: Some(1) }
 Destroyed session 1
 ```
 
+After that, you can close the virtual machine, on the first terminal:
+```
+shutdown now
+```
 
+And close the vAccel agent on the second terminal, with CTRL+C.
 
 
 
